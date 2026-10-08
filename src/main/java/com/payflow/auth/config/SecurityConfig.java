@@ -32,7 +32,9 @@ public class SecurityConfig {
                                 "/api/auth/register",
                                 "/api/auth/login",
                                 "/api/team-members",
-                                "/api/team-members/**"
+                                "/api/team-members/**",
+                                "/api/customers",
+                                "/api/customers/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 );
