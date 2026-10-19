@@ -34,7 +34,9 @@ public class SecurityConfig {
                                 "/api/team-members",
                                 "/api/team-members/**",
                                 "/api/customers",
-                                "/api/customers/**"
+                                "/api/customers/**",
+                                "/api/products",
+                                "/api.products/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 );
