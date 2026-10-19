@@ -43,7 +43,10 @@ public class SecurityConfig {
                                 "/api/plans/**",
 
                                 "/api/subscriptions",
-                                "/api/subscriptions/**"
+                                "/api/subscriptions/**",
+
+                                "/api/invoices",
+                                "/api/invoices/**"
 
 
                         ).permitAll()
