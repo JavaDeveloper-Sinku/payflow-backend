@@ -1,3 +1,4 @@
+
 package com.payflow.auth.config;
 
 import org.springframework.context.annotation.Bean;
@@ -18,25 +19,28 @@ public class SecurityConfig {
 
         http
                 .csrf(csrf -> csrf.disable())
-
                 .cors(cors -> {})
-
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(
                                 SessionCreationPolicy.STATELESS
                         )
                 )
-
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/api/auth/register",
                                 "/api/auth/login",
+
                                 "/api/team-members",
                                 "/api/team-members/**",
+
                                 "/api/customers",
                                 "/api/customers/**",
+
                                 "/api/products",
-                                "/api.products/**"
+                                "/api/products/**",
+
+                                "/api/plans",
+                                "/api/plans/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 );
