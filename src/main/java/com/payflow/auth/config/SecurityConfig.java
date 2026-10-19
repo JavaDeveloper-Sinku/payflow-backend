@@ -40,7 +40,12 @@ public class SecurityConfig {
                                 "/api/products/**",
 
                                 "/api/plans",
-                                "/api/plans/**"
+                                "/api/plans/**",
+
+                                "/api/subscriptions",
+                                "/api/subscriptions/**"
+
+
                         ).permitAll()
                         .anyRequest().authenticated()
                 );
